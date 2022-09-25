@@ -1,0 +1,61 @@
+@import "../../assets/styles/common/mixins.less";
+@import "../../assets/styles/common/colors.less";
+
+.error-404-page {
+  background: rgb(179, 168, 233);
+  background: linear-gradient(135deg, rgba(179, 168, 233, 1) 0%, rgba(139, 128, 234, 1) 50%, rgba(100, 87, 222, 1) 89%);
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.error-404-page-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  z-index: 1;
+}
+
+.error-404-page__text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.error-404-page__header {
+  .setFontMontserrat(700, 200px, 100%, @white-1);
+  margin: 0;
+}
+
+.error-404-page__type {
+  .setFontMontserrat(700, 64px, 110%, @white-1);
+  margin: 0;
+}
+
+.error-404-page__description {
+  .setFontMontserrat(500, 48px, 110%, @lavender);
+  width: 60%;
+  text-align: center;
+  margin: 0;
+}
+
+.error-404-page__stars {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+
+  & img {
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    z-index: 0;
+  }
+}

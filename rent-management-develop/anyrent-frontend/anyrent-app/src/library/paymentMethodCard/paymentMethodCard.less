@@ -1,0 +1,64 @@
+@import "../../assets/styles/common/mixins.less";
+@import "../../assets/styles/common/colors.less";
+
+.ar-payment-card {
+    cursor: pointer;
+    display: flex;
+    width: 128px;
+    height: 80px;
+    padding: 4px;
+    border: 1px solid @violetta;
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.ar-payment-card-selected {
+    border: 3px solid @violetta;
+}
+
+.ar-payment-card-add {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    span {
+        font-size: 14px;
+    }
+}
+
+.ar-payment-card__card {
+    height: 100%;
+    width: 90%;
+    color: white;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-around;
+    .bank-name {
+        color: white;
+        font-size: 14px;
+    }
+
+    .card-info {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .card__numbers {
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        .card__payment {
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+}

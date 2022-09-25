@@ -1,0 +1,33 @@
+@import "../../assets/styles/common/mixins.less";
+@import "../../assets/styles/common/colors.less";
+
+.ar-pesonal-page-container {
+  width: 278px;
+  height: 762px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  background: @white-2;
+  border-radius: 15px;
+}
+
+.ar-pesonal-page__avatar {
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.ar-pesonal-page__info-block {
+
+  .info-block__text {
+    .setFontMontserrat(500, 14px, 120%, @violetta);
+  }
+
+  .info-block__icon {
+    margin-right: 10px;
+  }
+}

@@ -1,0 +1,27 @@
+@import "../../assets/styles/common/colors.less";
+
+.ar-datepicker-container {
+    display: inline-block;
+    
+    &__input {
+        width: 235px;
+        height: 46px;
+        border: 2px solid @violetta;
+        font-size: 18px;
+        box-sizing: border-box;
+        outline: none;
+        color: @violetta;
+        border-radius: 8px;
+        padding: 0 25px 0 30px;
+        cursor: pointer;
+        background: url("../../assets/styles/svg/icons/clock.svg") no-repeat left, url("../../assets/styles/img/iDownArrow.png") no-repeat right;
+        background-position: 6px, right;
+        &:focus {
+            
+        }
+        &::placeholder {
+            color: @violetta;
+            opacity: 0.5;
+        }
+    }
+}

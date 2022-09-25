@@ -1,0 +1,295 @@
+@import "../../assets/styles/common/colors.less";
+
+.ar-payment-container {
+    max-width: 1200px;
+
+    &__nav-title {
+        display: flex;
+        align-items: center;
+        height: 50px;
+        cursor: pointer;
+
+        &:hover{
+            img {
+               
+                transform: translateX(-5px);
+            }
+        }
+
+        img {
+            width: 31px;
+            transition: all 0.2s ease;
+        }
+
+        span {
+            font-size: 24px;
+            color: @violetta;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+    }
+
+    &__price {
+        display: flex;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+        background: @lavender;
+
+        &__wrapper {
+            display: flex;
+            justify-content: space-between;
+            height: 70%;
+            width: 300px;
+
+            &__keys {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .price-wrapper-keys {
+                    &__hour {
+                        font-size: 18px;
+                        font-weight: 400;
+                    }
+
+                    &__general {
+                        font-size: 18px;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            &__values {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .price-wrapper-values {
+                    &__hour {
+                        color: @violetta;
+                        font-size: 18px;
+                        font-weight: 400;
+                    }
+                    &__general {
+                        color: @violetta;
+                        font-size: 24px;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+
+    &__button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 120px;
+    }
+
+    &__inner {
+        background: @white;
+        padding: 30px 20px 10px 20px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 20px;
+        margin-top: 20px;
+        margin-bottom: 30px;
+        &__product {
+            display: flex;
+            justify-content: space-between;
+            height: 220px;
+            border-bottom: 2px solid @lavender;
+
+            .ar-payment-product__info {
+                display: flex;
+                justify-content: space-between;
+                width: 725px;
+                &__product-img {
+                    width: 200px;
+                    max-height: 150px;
+                    img {
+                        width: 100%;
+                        max-height: 200px;
+                        object-fit: cover;
+                    }
+                }
+
+                &__product-text {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    width: 70%;
+
+                    .payment-product-text {
+                        &__title {
+                            width: 100%;
+                            display: flex;
+                            margin-bottom: 5px;
+                            height: 42px;
+                            align-items: center;
+                            min-width: 0;
+                            span {
+                                font-size: 18px;
+                                font-weight: 700;
+                                width: 100%;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                        }
+
+                        &__details {
+                            display: flex;
+                            min-width: 0;
+                            min-height: 70px;
+                            margin-bottom: 5px;
+                            span {
+                                white-space: wrap;
+                                font-size: 14px;
+                                font-weight: 400;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                        &__address {
+                            display: flex;
+                            height: 25px;
+                            align-items: center;
+                            margin-bottom: 5px;
+                            span {
+                                color: @violetta;
+                                max-height: 150px;
+                                width: 100%;
+                                font-size: 14px;
+                                font-weight: 400;
+                                white-space: wrap;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                            }
+                        }
+                        &__price-wrapper {
+                            height: 34px;
+                            align-items: center;
+                            display: flex;
+                            justify-content: flex-start;
+                            gap: 16px;
+
+                            &__price {
+                                span {
+                                    font-weight: 700;
+                                    font-size: 18px;
+                                    color: @violetta;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .ar-payment-product__time-picker {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .payment-time-picker {
+                    &__inner {
+                        display: flex;
+                        justify-content: space-between;
+                        flex-direction: column;
+                        height: 100px;
+                    }
+                }
+            }
+        }
+
+        &__payments {
+            width: 100%;
+            height: 200px;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-bottom: 2px solid @lavender;
+            .ar-payment-product {
+                &__payment-title {
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    span {
+                        font-size: 24px;
+                        font-weight: 700;
+                        color: @violetta;
+                    }
+                }
+
+                &__payments-container {
+                    display: flex;
+                    width: 100%;
+                    justify-content: flex-start;
+                    gap: 20px;
+                    flex-direction: row;
+                }
+
+                &__payment-info {
+                    span {
+                        font-size: 14px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+
+        &__order-info {
+            padding: 10px;
+            height: 125px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            margin-bottom: 15px;
+            .ar-payment-product {
+                &__order-title {
+                    height: 30px;
+                    display: flex;
+                    align-items: center;
+                    span {
+                        font-size: 24px;
+                        font-weight: 700;
+                        color: @violetta;
+                    }
+                }
+
+                &__order-info {
+                    display: flex;
+                    justify-content: space-between;
+                    &__column {
+                        display: flex;
+                        flex-direction: row;
+
+                        height: 50px;
+                        width: 320px;
+                        justify-content: space-between;
+
+                        &__keys {
+                            display: flex;
+                            justify-content: space-between;
+                            flex-direction: column;
+                            span {
+                                margin-right: 10px;
+                                font-size: 18px;
+                                font-weight: 400;
+                            }
+                        }
+
+                        &__values {
+                            display: flex;
+                            justify-content: space-between;
+                            flex-direction: column;
+                            span {
+                                font-size: 18px;
+                                font-weight: 500;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

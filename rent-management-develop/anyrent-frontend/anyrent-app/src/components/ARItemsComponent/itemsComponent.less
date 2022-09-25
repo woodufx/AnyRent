@@ -1,0 +1,69 @@
+@import "../../assets/styles/common/colors.less";
+
+.ar-items-container {
+    &__nav-title {
+        display: flex;
+        align-items: center;
+        height: 50px;
+
+        span {
+            font-size: 24px;
+            color: @violetta;
+            font-weight: 700;
+            margin-left: 10px;
+        }
+    }
+
+    &__main-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 30px;
+        &__filters-wrapper {
+            width: 282px;
+            justify-content: center;
+            display: flex;
+        }
+
+        &__product-container {
+            width: 895px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+
+            .ar-product-container {
+                &__sort-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    height: 100px;
+                    width: 40%;
+                }
+
+                &__product-list {
+                    max-width: 895px;
+                    min-height: 700px;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+
+                    &__inner {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 100%;
+                        flex-wrap: wrap;
+                        gap: 20px;
+                    }
+                }
+
+                &__pagination-wrapper {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 100px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

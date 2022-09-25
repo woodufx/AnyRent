@@ -1,0 +1,190 @@
+@import "../../assets/styles/common/colors.less";
+
+@fieldPadding: 12px;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+.ar-input-label {
+    margin-bottom: 12px;
+    font-weight: 500;
+    padding-left: 8px;
+    font-size: 16px;
+    &__star {
+        font-size: 16px;
+        color: #e74c3c;
+    }
+}
+
+.ar-input-wrapper {
+    max-width: 290px;
+}
+
+//mixin
+
+.placeholderMixin {
+    position: absolute;
+    left: @fieldPadding;
+    width: calc(100% - (@fieldPadding * 2));
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    top: 50%;
+    line-height: 100%;
+    transform: translateY(-50%);
+    color: #bdbdbd;
+    transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease, opacity 0.2s;
+}
+
+.anyrent-input {
+    position: relative;
+    border-top: 20px solid transparent;
+    margin-bottom: 5px;
+    margin: 0;
+
+    input {
+        font-size: 18px;
+        border: none;
+        padding: 8px;
+        height: 45px;
+        outline: none;
+        padding-right: 27px;
+        background: none;
+        border-bottom: 1px solid #bdbdbd;
+        transition: border-color 0.3s ease;
+    }
+    .placeholder {
+        overflow: hidden;
+        .placeholderMixin();
+    }
+
+    input + .placeholder {
+        left: 5px;
+        padding: 0 5px;
+    }
+
+    input.dirty,
+    input:focus {
+        border-color: @violetta;
+        transition-delay: 0.1s;
+    }
+
+    input.dirty + .placeholder,
+    input:not(:placeholder-shown) + .placeholder,
+    input:focus + .placeholder {
+        top: -10px;
+        font-size: 12px;
+        color: #222;
+        background: @white-2;
+        width: auto;
+    }
+    input.success {
+        background: url("../../assets/styles/img/iCheck.png") no-repeat right;
+        background-position-x: calc(100% - 6px);
+    }
+
+    input.error {
+        background: url("../../assets/styles/img/iClose.png") no-repeat right;
+        background-position-x: calc(100% - 6px);
+    }
+}
+
+.variant-standard {
+    input {
+        width: 205px;
+        color: @violetta;
+    }
+}
+
+.variant-outlined {
+    input {
+        border: 1px solid #bdbdbd;
+        transition: border-color 0.3s ease;
+        border-radius: 14px;
+        width: 290px;
+    }
+}
+
+.size-large {
+    input {
+        width: 477px;
+    }
+}
+
+.icon-email-purple {
+    input {
+        background: url("../../assets/styles/svg/icons/mail-purple.svg") no-repeat right;
+        background-position-x: calc(100% - 6px);
+    }
+}
+.icon-email {
+    input {
+        background: url("../../assets/styles/svg/icons/mail.svg") no-repeat right;
+        background-position-x: calc(100% - 6px);
+    }
+}
+
+.icon-user {
+    input {
+        background: url("../../assets/styles/svg/icons/user.svg") no-repeat right;
+        background-position-x: calc(100% - 6px);
+    }
+}
+
+.icon-first-second-name {
+    input {
+        background: url("../../assets/styles/svg/icons/FSname.svg") no-repeat right;
+        background-position-x: calc(100% - 6px);
+    }
+}
+
+.icon-usersignup {
+    input {
+        background: url("../../assets/styles/svg/icons/userSignup.svg") no-repeat right;
+        background-position-x: calc(100% - 6px);
+    }
+}
+
+.icon-password {
+    input {
+        background: url("../../assets/styles/svg/icons/lock.svg") no-repeat right;
+        background-position-x: calc(100% - 6px);
+    }
+}
+
+.icon-calendar {
+    input {
+        background: url("../../assets/styles/svg/icons/calendar.svg") no-repeat right;
+        background-position-x: calc(100% - 6px);
+    }
+}
+
+.icon-phone {
+    input {
+        background: url("../../assets/styles/svg/icons/phone-call.svg") no-repeat right;
+        background-position-x: calc(100% - 6px);
+    }
+}
+
+.ar-input-valid {
+    input {
+        border: 1px solid green;
+    }
+}
+
+.ar-input-not-valid {
+    input {
+        border: 1px solid #eb5757;
+    }
+}
+
+.ar-input__helper-text {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    span {
+        font-size: 14px;
+        color: #eb5757;
+    }
+}

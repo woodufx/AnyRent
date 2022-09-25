@@ -1,0 +1,122 @@
+@import "../../assets/styles/common/mixins.less";
+@import "../../assets/styles/common/colors.less";
+
+.page-body {
+    margin-bottom: 0px;
+    padding-bottom: 15px;
+    width: 894px;
+    background-color: @white-2;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.personal-info {
+    width: 85%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header {
+        margin-top: 16px;
+    }
+}
+
+.header {
+    height: 30px;
+    display: flex;
+    align-items: center;
+
+    .header-span {
+        .setFontMontserrat(600, 24px, 120%, @violetta);
+        margin-left: 16px;
+    }
+
+    .header-logo {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+.first-string {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 34px;
+}
+
+.third-string__heading {
+    .setFontMontserrat(600, 18px, 120%, @black);
+    margin-top: 60px;
+}
+
+.second-string {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    margin-top: 36px;
+    justify-content: space-between;
+    .checkbox-block {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        // margin-left: 70.67px;
+
+        .checkbox-label {
+            .setFontMontserrat(500, 16px, 120%, @black);
+            margin-bottom: 26px;
+        }
+
+        .checkbox-wrapper {
+            display: flex;
+
+            .checkbox-group {
+                &:last-child {
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+}
+
+.presonal-info__button {
+    margin-top: 36px;
+}
+
+.third-string {
+    display: flex;
+    align-items: center;
+    margin-top: 16.67px;
+    margin-bottom: 29px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.middle-line {
+    width: 773px;
+    height: 2px;
+    background-color: @lavender;
+    margin-top: 18px;
+}
+
+.password-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 33px;
+}
+
+.input-group {
+    margin-top: 16px;
+
+    &:last-child {
+        margin-bottom: 32px;
+    }
+}
+
+.radio-group-header {
+    .setFontMontserrat(500, 16px, 120%, @black);
+    margin-bottom: 10px;
+}

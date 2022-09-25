@@ -1,0 +1,39 @@
+@import "../../assets/styles/common/colors.less";
+
+.ar-toggle-group-wrapper {
+    display: inline-flex;
+}
+
+.ar-toggle-button {
+    display: flex;
+    align-items: center;
+    height: 23px;
+    width: 30px;
+    justify-content: center;
+    background-color: @white;
+    cursor: pointer;
+    border: 1px solid @violetta;
+    opacity: 0.5;
+    transition: all 0.1s ease;
+
+    &:hover {
+        background-color: @lavender;
+    }
+}
+
+.ar-toggle-button-left {
+    border-radius: 7px 0 0 7px;
+}
+
+.ar-toggle-button-right {
+    border-radius: 0 7px 7px 0;
+}
+
+.ar-toggle-button-center {
+    border: 1px solid @violetta;
+}
+
+.ar-toggle-button-selected {
+    opacity: 1;
+    background-color: @lavender;
+}

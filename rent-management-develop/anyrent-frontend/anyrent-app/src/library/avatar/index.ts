@@ -1,0 +1,1 @@
+export { ARAvatar } from "./Avatar";

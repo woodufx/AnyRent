@@ -1,0 +1,93 @@
+@import "../../assets/styles/common/mixins.less";
+
+//vars
+@hoverColor: #d7d5ec;
+
+//Styles
+
+.ar-radio-container {
+    position: relative;
+    padding-left: 35px;
+    height: 25px;
+    cursor: pointer;
+    font-size: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ar-radio-hideDefaultInput {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+.ar-radio-custom-checkmark(@backColor, @borderColor) {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background-color: @backColor;
+    border: 1px solid @borderColor;
+    /* Create the checkmark/indicator (hidden when not checked) */
+    &::after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+}
+
+.ar-radio-custom-checkmark-after(@checkmarkColor) {
+    left: 6px;
+    top: -5px;
+    width: 5px;
+    height: 15px;
+    border: solid @checkmarkColor;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.ar-radio-handler {
+    /* On mouse-over, add a grey background color */
+    &:hover input ~ .radio {
+        background-color: #d7d5ec;
+    }
+
+    /* Show the checkmark when checked */
+    input:checked ~ .radio:after {
+        display: block;
+    }
+}
+
+.ar-radio-contained {
+    .ar-radio-container();
+    input {
+        .ar-radio-hideDefaultInput();
+    }
+    .radio {
+        .ar-radio-custom-checkmark(@violetta, @white);
+    }
+    .ar-radio-handler();
+    .radio:after {
+        .ar-radio-custom-checkmark-after(@white);
+    }
+}
+
+.ar-radio-outlined {
+    .ar-radio-container();
+    input {
+        .ar-radio-hideDefaultInput();
+    }
+
+    .radio {
+        .ar-radio-custom-checkmark(@white, @violetta);
+    }
+    .ar-radio-handler();
+    .radio:after {
+        .ar-radio-custom-checkmark-after(@violetta);
+    }
+}

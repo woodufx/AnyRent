@@ -1,0 +1,85 @@
+@import "../../assets/styles/common/colors.less";
+
+.ar-category-wrapper {
+    height: 238px;
+    width: 384px;
+    border-radius: 26px;
+    background-color: #f5f6f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    @keyframes moving {
+        0% {
+            transform: rotate(0);
+        }
+        50% {
+            transform: rotate(5deg);
+        }
+        100% {
+            transform: rotate(0);
+        }
+    }
+
+    .ar-category__inner {
+        position: relative;
+        height: 212px;
+        width: 359px;
+
+        .ar-category__title {
+            width: 140px;
+            height: 50px;
+            position: relative;
+            left: 25px;
+            top: 50px;
+            z-index: 1;
+            font-weight: 700;
+        }
+
+        .ar-category__back {
+            position: relative;
+            width: 320px;
+            height: 170px;
+            z-index: 0;
+
+            .ar-category__img {
+                position: relative;
+                top: -10%;
+                left: 40%;
+                width: 200px;
+                height: 190px;
+                background-position: 85%;
+                background-repeat: no-repeat;
+                transition: all 0.5s ease;
+
+                &:hover {
+                    animation: moving 1s infinite;
+                }
+            }
+
+            .ar-category__circle {
+                position: relative;
+                background-color: #ffc9bd;
+                border-radius: 50%;
+                height: 157px;
+                width: 157px;
+                left: 100px;
+                top: -125%;
+                border: 10px solid #ffffff;
+                z-index: -1;
+            }
+        }
+
+        .ar-category__icon {
+            position: relative;
+            width: 37px;
+            top: -20%;
+            left: 88%;
+            transition: all 0.2s ease;
+            &:hover {
+                transform: translateX(5px);
+            }
+        }
+    }
+}

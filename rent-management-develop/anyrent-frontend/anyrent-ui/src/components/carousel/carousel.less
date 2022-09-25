@@ -1,0 +1,82 @@
+@import "../../assets/styles/common/colors.less";
+
+.carousel {
+    overflow: hidden;
+    height: 420px;
+}
+
+.indicator-buttons {
+    &__prev {
+        border: none;
+        position: relative;
+        top: -410px;
+        background: transparent;
+        height: 316px;
+        border-radius: 5px;
+        cursor: pointer;
+        background: rgba(128, 128, 128, 0.205);
+        img {
+            width: 45px;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    &__next {
+        border: none;
+        position: relative;
+        left: calc(100% - 115px);
+        top: -410px;
+        background: transparent;
+        height: 316px;
+        border-radius: 5px;
+        cursor: pointer;
+        background: rgba(128, 128, 128, 0.205);
+
+        img {
+            width: 45px;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+}
+.inner {
+    white-space: nowrap;
+    transition: transform 0.3s;
+}
+
+.carousel-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.indicators {
+    display: flex;
+    justify-content: space-between;
+
+    img {
+        cursor: pointer;
+        height: 88px;
+        width: 88px;
+        border-radius: 5px;
+    }
+
+    .active {
+        border: 2px solid @violetta;
+        color: #fff;
+    }
+}
+
+.indicators > button {
+    margin: 5px;
+}
+
+.indicators > button.active {
+    background-color: green;
+    color: #fff;
+}

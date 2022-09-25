@@ -1,0 +1,47 @@
+@import "../../assets/styles/common/mixins.less";
+@import "../../assets/styles/common/colors.less";
+
+.contacts-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.contacts__content {
+    @media screen and (min-width: 1800px) and (max-width: 2000px){     
+        height: 750px;
+    }
+    @media screen and (min-width: 2000px) and (max-width: 3000px){     
+        height: 950px;
+    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.contacts__h1 {
+    width: 1200px;
+    .setFontMontserrat(700, 24px, 110%, @violetta);
+}
+
+.contacts__h2 {
+    width: 1200px;
+    .setFontMontserrat(500, 18px, 110%, @black);
+}
+
+.contacts__a {
+    width: 1200px;
+    .setFontMontserrat(500, 18px, 20%, @violetta);
+}
+
+strong {
+    .setFontMontserrat(600, 18px, 110%, @black);
+}
+
+.contacts__a {
+    width: 1200px;
+    margin-bottom: 20px;
+    text-decoration: none;
+    .setFontMontserrat(500, 18px, 20%, @violetta);
+}

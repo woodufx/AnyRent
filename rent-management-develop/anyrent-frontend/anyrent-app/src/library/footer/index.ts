@@ -1,0 +1,1 @@
+export { ARFooter } from "./Footer";

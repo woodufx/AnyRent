@@ -1,0 +1,36 @@
+@import "../../assets/styles/common/mixins.less";
+
+//vars
+
+@hoverColor: #d7d5ec;
+
+//Styles
+
+.ar-checkbox-contained {
+    .container();
+    input {
+        .hideDefaultInput();
+    }
+    .checkmark {
+        .custom-checkmark(@violetta, @white);
+    }
+    .handler();
+    .checkmark:after {
+        .custom-checkmark-after(@white);
+    }
+}
+
+.ar-checkbox-outlined {
+    .container();
+    input {
+        .hideDefaultInput();
+    }
+
+    .checkmark {
+        .custom-checkmark(@white, @violetta);
+    }
+    .handler();
+    .checkmark:after {
+        .custom-checkmark-after(@violetta);
+    }
+}

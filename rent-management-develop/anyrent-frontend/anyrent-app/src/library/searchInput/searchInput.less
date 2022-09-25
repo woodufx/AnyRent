@@ -1,0 +1,74 @@
+@import "../../assets/styles/common/colors.less";
+
+@fieldPadding: 12px;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+.label {
+    margin-bottom: 12px;
+}
+
+.search-input-wrapper {
+    max-width: 290px;
+}
+
+//mixin
+
+.placeholderMixin {
+    position: absolute;
+    left: @fieldPadding;
+    width: calc(100% - (@fieldPadding * 2));
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    top: 50%;
+    line-height: 100%;
+    transform: translateY(-50%);
+    color: #bdbdbd;
+    transition: top 0.3s ease, color 0.3s ease, font-size 0.3s ease, opacity 0.2s;
+}
+
+
+.anyrent-search-input{
+    position: relative;
+    border-top: 20px solid transparent;
+    margin-bottom: 5px;
+    margin: 0;
+    input {
+        border: none;
+        padding: @fieldPadding;
+        border-radius: 14px;
+        width: 290px;
+        height: 45px;
+        outline: none;
+        background-color: @violetta;
+        padding-left: 40px;
+        color: @white;
+        width: 50px;
+        background-image: url("../../assets/styles/img/iSearch.png");
+        background-position: 12px;
+        background-repeat: no-repeat;
+        -webkit-transition: width 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+        -webkit-transition: 0.4s ease-in-out;
+        transition: width 0.4s ease-in-out;
+        cursor: pointer;
+        &:focus {
+            width: 230px;
+        }
+    }
+    .placeholder {
+        .placeholderMixin();
+        left: 110%;
+    }
+
+    input.dirty + .placeholder,
+    input:not(:placeholder-shown) + .placeholder,
+    input:focus + .placeholder {
+        opacity: 0%;
+        font-size: 12px;
+        color: @violetta;
+    }
+}

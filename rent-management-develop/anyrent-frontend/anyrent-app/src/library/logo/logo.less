@@ -1,0 +1,43 @@
+@import "../../assets/styles/common/mixins.less";
+@import "../../assets/styles/common/colors.less";
+
+
+.ar-logo {
+  display: flex;
+  align-items: center;
+  max-width: 166px;
+
+  &--hover {
+    &:hover {
+      cursor: pointer;
+    }
+
+  }
+}
+
+
+.ar-logo__icon-container {
+  &--mini {
+    height: 36px;
+    width: 36px;
+    margin-right: 5px;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.20);
+    border-radius: 10px;
+  }
+
+  &--default {
+    height: 43px;
+    width: 43px;
+    margin-right: 14px;
+  }
+}
+
+.logo__text {
+  &--violetta-text {
+    .setFontMontserrat(700, 24px, 120%, @violetta);
+  }
+
+  &--white-text {
+    .setFontMontserrat(700, 24px, 120%, @white);
+  }
+}

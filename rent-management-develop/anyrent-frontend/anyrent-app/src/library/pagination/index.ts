@@ -1,0 +1,1 @@
+export { ARPagination } from "./Pagination";

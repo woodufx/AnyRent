@@ -1,0 +1,86 @@
+@import "../../assets/styles/common/mixins.less";
+@import "../../assets/styles/common/colors.less";
+
+.about-team-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.about-team__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.about-team__title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    background-color: @white-1;
+    h1 {
+        width: 1200px;
+        text-align: center;
+        .setFontMontserrat(700, 40px, 110%, @violetta);
+    }
+}
+.about-team__persons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 450px;
+    background: url("../../assets/styles/img/backgroundMiddle.png");
+    background-size: cover;
+}
+.about-team__persons-container {
+    display: flex;
+    flex-direction: row;
+    width: 1200px;
+    justify-content: space-between;
+    align-items: top;
+}
+.about-team__preson {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    img {
+        width: 250px;
+        pointer-events: none;
+    }
+}
+.about-team__person-name {
+    .setFontMontserrat(700, 32px, 110%, @white-1);
+    text-align: center;
+}
+.about-team__person-description {
+    width: 300px;
+    .setFontMontserrat(500, 20px, 110%, @white-2);
+    text-align: center;
+}
+.about-team__info {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 900px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: @white-2;
+    img {
+        height: 600px;
+        pointer-events: none;
+    }
+}
+.about-team__info-header {
+    width: 1200px;
+    text-align: center;
+    .setFontMontserrat(700, 40px, 110%, @violetta);
+}
+.about-team__info-text {
+    width: 1200px;
+    text-align: center;
+    .setFontMontserrat(500, 24px, 110%, @violetta);
+}

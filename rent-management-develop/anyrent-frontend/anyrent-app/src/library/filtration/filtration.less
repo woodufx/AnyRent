@@ -1,0 +1,75 @@
+@import "../../assets/styles/common/colors.less";
+@import "../../assets/styles/common/mixins.less";
+
+.ar-filtration-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    &__main {
+        width: 282px;
+    }
+    &__headerline {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    &__header {
+        .setFontMontserrat(800, 18px, 100%, @black-black);
+    }
+    &__chheckboxcontainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        animation: showRate 0.3s ease;
+        transition: all 0.3s ease;
+        gap: 14px;
+    }
+    &__slider{
+        animation: showRate 0.5s ease;
+    }
+    &__checkboxcontainersecond {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        animation: showRate 0.3s ease;
+        gap: 14px;
+    }
+    &__checkbox {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+    &__subheader {
+        .setFontMontserrat(400, 18px, 5%, @black-black);
+    }
+    &__showall {
+        .setFontMontserrat(400, 18px, 40%, @violetta);
+        cursor: pointer;
+    }
+    &__headerline--doublelined {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+    }
+    &__header--doublelined {
+        .setFontMontserrat(800, 18px, 100%, @black-black);
+        width: 165px;
+    }
+}
+.ar-filtration__img {
+    transition: 0.5s ease;
+}
+
+@keyframes showRate {
+    0% {
+        opacity: 0;
+        transform: translateY(-20%);
+    }
+
+    100% {
+        opacity: 100%;
+    }
+}

@@ -1,0 +1,97 @@
+@import "../../assets/styles/common/mixins.less";
+@import "../../assets/styles/common/colors.less";
+
+.simple {
+    .wrapper(230px, 40px);
+    padding-left: 10px;
+    padding-right: 10px;
+
+    button {
+        .btn-wrapper (@paginationText, @white);
+        transition: 0.2s;
+        &:hover {
+            background-color: #c9c9c9;
+            transform: scale(1.15);
+        }
+    }
+
+    .icon {
+        width: 14px;
+        padding: 0px;
+    }
+
+    .btn-icon {
+        padding: 0;
+    }
+    .active {
+        color: @violetta;
+        transform: scale(1.3);
+    }
+}
+
+.small {
+    .wrapper(220px, 27px);
+
+    button {
+        .btn-wrapper(@violetta, @paginationButton);
+        align-items: center;
+        height: 21px;
+        margin-left: 0px;
+        transition: 0.2s;
+        &:hover {
+            background-color: #c9c9c9;
+            transform: scale(1.15);
+        }
+    }
+    .btn-icon {
+        padding: 0;
+    }
+    .icon {
+        height: 24px;
+        padding: 0px;
+    }
+    .active {
+        background-color: @violetta;
+        color: @paginationButton;
+    }
+}
+
+.wide {
+    .wrapper (370px,40px);
+    border: 1px solid @violetta;
+    button {
+        .btn-wrapper(@paginationText, @white);
+        align-items: center;
+        height: 21px;
+        margin-left: 3px;
+        border-radius: 0px;
+        transition: 0.3s;
+        &:hover {
+            transform: scale(1.15);
+        }
+    }
+
+    .btn-icon {
+        padding: 0;
+        display: flex;
+
+        p {
+            font-size: 10px;
+        }
+
+        .active-text {
+            color: @violetta;
+        }
+    }
+
+    .icon {
+        height: 10px;
+        padding: 0px;
+    }
+
+    .active {
+        color: @violetta;
+        border-bottom: 2px solid @violetta;
+        transform: scale(1.25);
+    }
+}

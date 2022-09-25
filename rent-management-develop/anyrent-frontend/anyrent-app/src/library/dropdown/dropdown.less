@@ -1,0 +1,56 @@
+@import "../../assets/styles/common/colors.less";
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.dropdown-wrapper {
+    width: 290px;
+
+    .dropdown-header {
+        display: flex;
+        align-items: center;
+        height: 46px;
+        background-image: url("../../assets/styles/img/iDownArrow.png");
+        background-position: right 10px center;
+        background-repeat: no-repeat;
+        border: 1px solid @violetta;
+        border-radius: 14px;
+        padding: 1em;
+        cursor: pointer;
+    }
+
+    .dropdown-list-container {
+        position: absolute;
+        z-index: 100;
+    }
+
+    .dropdown-list {
+        padding-top: 15px;
+        margin-top: 0.3em;
+        border-radius: 14px;
+        padding-left: 1em;
+        background: @white;
+        border: 1px solid @violetta;
+        box-sizing: border-box;
+        width: 290px;
+
+        .dropdown-option {
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            overflow: hidden;
+            margin-bottom: 0.8em;
+            padding-right: 0.8em;
+            cursor: pointer;
+            transition: 0.2s;
+
+            &:hover {
+                color: @violetta;
+                transform: translateX(5px);
+            }
+        }
+    }
+}

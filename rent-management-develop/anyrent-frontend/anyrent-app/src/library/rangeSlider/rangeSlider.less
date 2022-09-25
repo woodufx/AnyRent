@@ -1,0 +1,91 @@
+@import "../../assets/styles/common/colors.less";
+@import "../../assets/styles/common/mixins.less";
+
+.ar-range-slider-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 282px;
+    height: 62px;
+
+    &__inputs {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__rectangle {
+        width: 15px;
+        height: 2px;
+        background-color: @violetta;
+        border-radius: 2px;
+        }
+    &__input { 
+        width: 125px;
+        height: 30px;
+        border-radius: 14px;
+        border: 1px solid @lavender;
+        padding-left: 14px;
+        .setFontMontserrat(500, 18px, 100%, @black-black);
+        outline: none;
+        -moz-appearance: textfield;
+    }
+    input[type="number"]::-webkit-outer-spin-button,
+    input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+    &__input:hover { 
+        transition: 0.5s;
+        border: 1px solid @violetta;
+    }
+    &__input:focus {
+        border: 1px solid @violetta;
+        transition: 0.5s;
+    }
+    &__slider {
+        display: flex;
+        justify-content: center;
+    }
+    &__slider-background {
+        width: 260px;
+        height: 4px;
+        border-radius: 10px;
+        position: relative;
+        background: @lavender;
+    }
+    &__slider-progress {
+        height: 4px;
+        position: absolute;
+        border-radius: 10px;
+        background: @violetta;
+    }
+    &__range {
+        position: relative;
+    }
+    &__range input {
+        position: absolute;
+        top: -20px;
+        height: 5px;
+        width: 100%;
+        background: none;
+        pointer-events: none;
+        -webkit-appearance: none;
+    };
+    input[type="range"]::-webkit-slider-thumb {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        -webkit-appearance: none;
+        pointer-events: auto;
+        background: @white;
+        border: 2px solid @violetta;
+    }
+    input[type="range"]::-moz-range-thumb {
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        -moz-appearance: none;
+        pointer-events: auto;
+        background: @white;
+        border: 2px solid @violetta;
+    }
+}

@@ -1,0 +1,35 @@
+@import "../../assets/styles/common/mixins.less";
+
+//vars
+@hoverColor: #d7d5ec;
+
+//Styles
+
+.ar-radio-contained {
+    .container();
+    input {
+        .hideDefaultInput();
+    }
+    .radio {
+        .custom-radio(@violetta, @white);
+    }
+    .handler();
+    .radio:after {
+        .custom-radio-after(@white);
+    }
+}
+
+.ar-radio-outlined {
+    .container();
+    input {
+        .hideDefaultInput();
+    }
+
+    .radio {
+        .custom-radio(@white, @violetta);
+    }
+    .handler();
+    .radio:after {
+        .custom-radio-after(@violetta);
+    }
+}

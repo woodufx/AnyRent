@@ -1,0 +1,51 @@
+@import "../../assets/styles/common/mixins.less";
+@import "../../assets/styles/common/colors.less";
+
+.findbug-wrapper {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.findbug__content {
+    height: 74vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: @white-1;
+}
+.findbug__color {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    background-color: @white-2;
+}
+.findbug__wrapper {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    width: 1200px;
+}
+.findbug__block {
+    text-align: right;
+    width: 48%;
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.findbug__img {
+    width: 300px;
+}
+.findbug__title {
+    .setFontMontserrat(700, 32px, 150%, @violetta);
+}
+.findbug__text {
+    .setFontMontserrat(500, 18px, 150%, @black);
+}
+.findbug__contacts {
+    .setFontMontserrat(600, 18px, 150%, @violetta);
+}

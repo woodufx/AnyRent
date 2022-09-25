@@ -1,0 +1,106 @@
+@import "../../assets/styles/common/colors.less";
+
+.ar-calendar-container {
+    display: flex;
+    flex-direction: column;
+    width: 235px;
+    height: 235px;
+    align-items: center;
+    justify-content: space-between;
+    border: 3px solid @violetta;
+    box-shadow: 0px 3px 11px -3px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    box-shadow: 0px 15px 0px 0px @lavender inset;
+    padding-top: 15px;
+    padding-bottom: 5px;
+    background-color: @white;
+    position: absolute;
+    margin-top: 5px;
+    &__top-bar {
+        border-top: 15px solid @lavender;
+        width: 100%;
+    }
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+
+        &__title {
+            font-size: 14px;
+            font-weight: 600;
+            color: @violetta;
+        }
+        &__icon {
+            width: 14px;
+            cursor: pointer;
+            img {
+                height: 14px;
+            }
+
+            transition: all 0.1s ease;
+            &:hover {
+                transform: scale(1.2);
+            }
+        }
+    }
+    &__day-names {
+        display: flex;
+        align-items: center;
+        width: 95%;
+        font-weight: 500;
+        color: @violetta;
+        justify-content: space-between;
+        div {
+            font-size: 14px;
+            width: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__week {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%;
+
+        &__day {
+            display: flex;
+            align-items: center;
+            width: 26px;
+            height: 26px;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.1s ease;
+            &:hover {
+                transform: scale(1.2);
+            }
+
+            &__inner {
+                font-size: 14px;
+                font-weight: 500;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+            }
+            .day-selected {
+                background-color: @lavender;
+                border: 2px solid @violetta;
+            }
+
+            .day-before {
+                opacity: 0.3;
+                cursor: not-allowed;
+            }
+
+            .day-today {
+                background-color: @lavender;
+            }
+        }
+    }
+}

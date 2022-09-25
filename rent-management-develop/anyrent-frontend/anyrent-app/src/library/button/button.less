@@ -1,0 +1,197 @@
+@import "../../assets/styles/common/mixins.less";
+@import "../../assets/styles/common/colors.less";
+
+.ar-button--sign-in {
+  // header, creation page
+  height: 46px;
+  width: 154.11px;
+  border: none;
+  border-radius: 14px;
+  transition: 0.5s;
+  .setFontMontserrat(600, 20px, 26px, @lavender);
+
+  background-color: @violetta;
+
+  &:hover {
+    cursor: pointer;
+    color: @violetta;
+    background-color: @lavender;
+    outline: 1px solid @violetta;
+  }
+  &:disabled {
+    cursor: default;
+    outline: none;
+    background-color: @lavender;
+    .setFontMontserrat(600, 20px, 26px, @white);
+  }
+}
+
+.ar-button--big-violet {
+  // login-page, order-page
+  height: 46px;
+  width: 208px;
+  border: none;
+  border-radius: 14px;
+  transition: 0.5s;
+  .setFontMontserrat(600, 20px, 26px, @lavender);
+
+  background-color: @violetta;
+
+  &:hover {
+    cursor: pointer;
+    color: @violetta;
+    background-color: @lavender;
+    outline: 1px solid @violetta;
+  }
+
+  &:disabled {
+    cursor: default;
+    outline: none;
+    background-color: @lavender;
+    .setFontMontserrat(600, 20px, 26px, @white);
+  }
+}
+
+.ar-button--big-violet-secondary {
+  // error-page
+  height: 46px;
+  width: 208px;
+  border: none;
+  border-radius: 14px;
+  transition: 0.5s;
+  .setFontMontserrat(600, 20px, 26px, @violetta);
+
+  background-color: @white-1;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0px -1px 61px 40px rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+  }
+}
+
+.ar-button--medium-violet {
+  // product-card, product-page
+  height: 31px;
+  width: 151.27px;
+  border: none;
+  border-radius: 14px;
+  transition: 0.2s;
+  .setFontMontserrat(600, 16px, 22px, @lavender);
+
+  background-color: @violetta;
+
+  &:hover {
+    cursor: pointer;
+    color: @lavender-hover;
+  }
+}
+
+.ar-button--long-violet {
+  // product-card, product-page
+  height: 35.71px;
+  width: 168.8px;
+  border: none;
+  border-radius: 14px;
+  transition: 0.2s;
+  .setFontMontserrat(600, 16px, 22px, @lavender);
+
+  background-color: @violetta;
+
+  &:hover {
+    cursor: pointer;
+    color: @lavender-hover;
+  }
+}
+
+.ar-button--longest-violet {
+  // product-page
+  height: 36px;
+  width: 326px;
+  border: none;
+  border-radius: 14px;
+  transition: 0.2s;
+  .setFontMontserrat(600, 16px, 22px, @lavender);
+
+  background-color: @violetta;
+
+  &:hover {
+    cursor: pointer;
+    color: @lavender-hover;
+  }
+}
+
+.ar-button--medium-lavender {
+  // personal-page, favourites, 
+
+  height: 34px;
+  width: 127.64px;
+  border: none;
+  outline: 1px solid @lavender;
+  border-radius: 14px;
+
+  .setFontMontserrat(600, 14px, 26px, @violetta);
+
+  background-color: @lavender;
+  transition: 0.5s;
+
+  &:hover {
+    cursor: pointer;
+    outline: 1px solid @violetta;
+  }
+
+  &:disabled {
+    cursor: default;
+    outline: none;
+    .setFontMontserrat(600, 14px, 26px, #C1B9F4);
+    background-image: none;
+  }
+}
+
+.ar-button--small-lavender {
+  // personal-page, favourites, 
+  height: 24.55px;
+  width: 123.86px;
+  border: none;
+  border-radius: 4px;
+  transition: 0.5s;
+  .setFontMontserrat(500, 14px, 16.8px, @violetta);
+
+  background-color: @lavender;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.ar-button--pen-icon {
+  background-image: url("../../assets/styles/img/penButtonIcon.png");
+  padding-right: 21px;
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 10px);
+  background-position-y: calc(100% - 12px);
+}
+
+.ar-button--upload-icon {
+  background-image: url("../../assets/styles/img/uploadButtonIcon.png");
+  padding-right: 23px;
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 10px);
+  background-position-y: calc(100% - 9px);
+}
+
+.ar-button--message-icon {
+  background-image: url("../../assets/styles/img/messageButtonIcon.png");
+  padding-right: 23px;
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 6px);
+  background-position-y: calc(100% - 4px);
+}
+
+.ar-button--call-icon {
+  background-image: url("../../assets/styles/img/callButtonIcon.png");
+  padding-right: 23px;
+  background-repeat: no-repeat;
+  background-position-x: calc(100% - 6px);
+  background-position-y: calc(100% - 4px);
+}

@@ -1,0 +1,42 @@
+@import "../../assets/styles/common/mixins.less";
+@import "../../assets/styles/common/colors.less";
+
+.ar-user-avatar-mixin (@border, @height, @width,@fontSize) {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    display: flex;
+    background: @lavender;
+    border: @border solid @violetta;
+    height: @height;
+    width: @width;
+    color: @violetta;
+    font-size: @fontSize;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.ar-user-avatar-hover {
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+.ar-user-avatar-small {
+    .ar-user-avatar-mixin (2px, 36px, 36px, 16px);
+    border-width: 3.5px;
+}
+
+.ar-user-avatar-medium {
+    .ar-user-avatar-mixin (4px, 75px, 75px, 32px);
+}
+
+.ar-user-avatar-large {
+    .ar-user-avatar-mixin (6px, 150px, 150px,64px);
+}

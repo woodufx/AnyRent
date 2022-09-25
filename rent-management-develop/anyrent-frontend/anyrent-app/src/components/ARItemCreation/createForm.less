@@ -1,0 +1,70 @@
+@import "../../assets/styles/common/mixins.less";
+@import "../../assets/styles/common/colors.less";
+
+.ar-create-form {
+    width: 894px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: @white-2;
+    border-radius: 15px;
+    &__title {
+        height: 45px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        span {
+            .setFontMontserrat(600, 24px, 120%, @violetta);
+            margin-left: 15px;
+        }
+    }
+
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        .create-form {
+            &__wrapper {
+                padding: 25px 0;
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+            }
+            &__main-info-wrapper {
+                width: 477px;
+                height: 900px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+            &__category-wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+                height: 110px;
+            }
+            &__images-wrapper {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
+            &__images-container {
+                margin-top: 20px;
+                min-height: 150px;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+            &__image-preview {
+                width: 150px;
+                max-height: 150px;
+            }
+        }
+    }
+}

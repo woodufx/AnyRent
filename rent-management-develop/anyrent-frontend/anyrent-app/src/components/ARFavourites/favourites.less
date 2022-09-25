@@ -1,0 +1,36 @@
+@import "../../assets/styles/common/mixins.less";
+@import "../../assets/styles/common/colors.less";
+
+.ar-favourites {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: @white-2;
+  width: 894px;
+  border-radius: 16px;
+  // height: 761px;
+}
+
+.ar-favourites__title {
+  display: flex;
+  justify-content: center;
+}
+
+.ar-favourites__icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 14px;
+}
+
+.ar-favourites__text {
+  .setFontMontserrat(500, 24px, 120%, @violetta);
+}
+
+.ar-favourites__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.ar-favourites__card {
+  margin-bottom: 16px;
+}

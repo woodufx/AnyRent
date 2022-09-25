@@ -1,0 +1,128 @@
+@import "../../assets/styles/common/colors.less";
+
+.ar-header {
+    .ar-header-wrapper {
+        height: 80px;
+        margin: 0 auto;
+        max-width: 1600px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .ar-header__logo-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            #toggle {
+                display: none;
+            }
+
+            .hamburger {
+                position: relative;
+                height: 29px;
+                z-index: 1;
+                margin-right: 10px;
+                cursor: pointer;
+            }
+
+            .hamburger div {
+                position: relative;
+                width: 29px;
+                height: 4px;
+                border-radius: 3px;
+                background-color: @violetta;
+                margin-top: 6px;
+                transition: all 0.2s ease-in-out;
+            }
+            //Hamburger animation
+            #toggle:checked + .hamburger .top-bun {
+                transform: rotate(45deg);
+                margin-top: 16px;
+            }
+            #toggle:checked + .hamburger .bottom-bun {
+                opacity: 0;
+                transform: rotate(-45deg);
+            }
+            #toggle:checked + .hamburger .meat {
+                transform: rotate(-45deg);
+                margin-top: -4px;
+            }
+
+            .ar-header__nav-menu {
+                border-top: 2px solid @violetta;
+                opacity: 0;
+                position: absolute;
+                -webkit-box-shadow: 0 8px 6px -6px @violetta;
+                -moz-box-shadow: 0 8px 6px -6px @violetta;
+                box-shadow: 0 8px 6px -6px @violetta;
+                height: 0px;
+                width: 1200px;
+                top: 25%;
+                display: flex;
+                flex-direction: column;
+                transition: opacity 0.1s ease-in-out, height 0.1s ease-in-out;
+                display: flex;
+                justify-content: space-between;
+                flex-direction: row;
+
+                .nav-menu__column {
+                    display: flex;
+                    flex-direction: column;
+
+                    .column__block {
+                        display: flex;
+                        flex-direction: column;
+                        a {
+                            font-size: 14px;
+                            margin: 2px 0;
+                            transition: 0.3s;
+                            cursor: pointer;
+                            &:hover {
+                                color: @violetta;
+                                transform: scale(1.05);
+                            }
+                        }
+                        h3 {
+                            margin-top: 20px;
+                            margin-bottom: 5px;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+            //Menu animation
+            #toggle:checked + .hamburger + .ar-header__nav-menu {
+                height: 316px;
+                opacity: 100%;
+            }
+        }
+
+        .ar-header__nav {
+            .navbar {
+                display: flex;
+                width: 400px;
+                justify-content: space-between;
+
+                a {
+                    color: @violetta;
+                    font-size: 18px;
+                    font-weight: 600;
+                    transition: 0.3s;
+                    cursor: pointer;
+                    &:hover {
+                        transform: scale(1.1);
+                    }
+                }
+            }
+        }
+
+        .ar-header-search__bar {
+            align-items: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 350px;
+        }
+    }
+}

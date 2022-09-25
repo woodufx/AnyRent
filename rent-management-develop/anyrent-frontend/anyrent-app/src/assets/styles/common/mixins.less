@@ -1,0 +1,160 @@
+@import "./fonts.less";
+@import "./colors.less";
+
+.setFontMontserrat(@weight, @size, @height, @color) {
+    font-family: "Montserrat";
+    font-style: normal;
+    font-weight: @weight;
+    font-size: @size;
+    line-height: @height;
+    color: @color;
+}
+
+.border {
+    border: none;
+    border-radius: 14px;
+}
+
+.hover-cursor {
+    cursor: pointer;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.main-btn(@color1, @color2) {
+    height: 46px;
+    width: 208px;
+
+    .setFontMontserrat(600, 20px, 26px, @color2);
+    .border;
+
+    background-color: @color1;
+
+    &:hover {
+        .hover-cursor;
+        outline: 1px solid @violetta;
+    }
+}
+
+.big-btn-link(@color1, @color2) {
+    height: 62px;
+    width: 163.56px;
+
+    .setFontMontserrat(600, 20px, 26px, @color2);
+    .border;
+
+    background-color: @color1;
+
+    &:hover {
+        .hover-cursor;
+        outline: 1px solid @violetta;
+    }
+}
+
+.header-btn(@color1, @color2) {
+    height: 46px;
+    width: 154.11px;
+
+    .border;
+    .setFontMontserrat(600, 20px, 26px, @color2);
+
+    background-color: @color1;
+
+    &:hover {
+        .hover-cursor;
+        color: @color1;
+        background-color: @color2;
+        outline: 1px solid @violetta;
+    }
+}
+
+.small-btn(@color1, @color2) {
+    height: 34px;
+    width: 73.75px;
+    .border;
+    .setFontMontserrat(600, 20px, 26px, @color2);
+
+    background-color: @color1;
+
+    &:hover {
+        .hover-cursor;
+        outline: 1px solid @violetta;
+    }
+}
+
+.medium-btn(@color1, @color2) {
+    height: 34px;
+    width: 127.64px;
+    .border;
+    .setFontMontserrat(600, 14px, 26px, @color2);
+
+    background-color: @color1;
+
+    &:hover {
+        .hover-cursor;
+    }
+}
+
+//Pagination mixins
+.wrapper(@width, @height) {
+    width: @width;
+    height: @height;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: @white;
+    border-radius: 6px;
+}
+
+.btn-wrapper(@color, @backColor) {
+    display: flex;
+    border: none;
+    color: @color;
+    font-weight: 500;
+    background-color: @backColor;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+// Radio mixins
+
+// Checkmark button Mixins
+
+
+// Equipment Card mixins
+
+.main-card-wrapper(@height, @width) {
+    height: @height;
+    width: @width;
+    border-radius: 20px;
+    background-color: #f5f6f8;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-info-mixin(@width, @height) {
+    width: @width;
+    height: @height;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.card-price-mixin {
+    color: @violetta;
+    font-weight: 700;
+    line-height: 21.6px;
+    font-size: 22px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
