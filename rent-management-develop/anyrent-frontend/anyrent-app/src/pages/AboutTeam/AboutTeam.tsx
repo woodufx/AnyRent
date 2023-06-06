@@ -22,24 +22,23 @@ const AboutTeam = (props: AboutTeamProps) => {
                 <div className="about-team__persons">
                     <div className="about-team__persons-container">
                         <div className="about-team__preson">
-                            <img src={antonstr} alt="" />
-                            <div className="about-team__person-name"> Стрельников Антон</div>
+                            <img src={dmitryl} alt="" />
+                            <div className="about-team__person-name"> Лиманский Дмитрий</div>
                             <div className="about-team__person-description">
-                                Гуру разработки приложений
+                                Гуру бэкенда на ноде (нет)
                             </div>
-                        </div>
-                        <div className="about-team__preson">
-                            <img src={michailch} alt="" />
-                            <div className="about-team__person-name"> Чусов Михаил</div>
+                        </div>  <div className="about-team__preson">
+                            <img src={dmitryl} alt="" />
+                            <div className="about-team__person-name"> Лиманский Дмитрий</div>
                             <div className="about-team__person-description">
-                                Музыкант и активный фронтенд разработчик
+                                Дизайнер данного проекта
                             </div>
                         </div>
                         <div className="about-team__preson">
                             <img src={dmitryl} alt="" />
                             <div className="about-team__person-name"> Лиманский Дмитрий</div>
                             <div className="about-team__person-description">
-                                Дизайнер и фронтенд разработчик
+                                Активный фронтенд-разработчик
                             </div>
                         </div>
                     </div>

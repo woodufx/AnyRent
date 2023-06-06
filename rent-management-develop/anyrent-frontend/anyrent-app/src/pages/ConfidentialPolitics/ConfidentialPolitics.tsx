@@ -21,7 +21,7 @@ const ConfidentialPolitics = (props: ConfidentialPoliticsProps) => {
                     <h3 className="terms-rights__h3"> г. Воронеж</h3>
                 </div>
                 <div className="">
-                    <h3 className="terms-rights__h3"> "19" мая 2022г.</h3>
+                    <h3 className="terms-rights__h3"> "6" мая 2023г.</h3>
                 </div>
             </div>
             <h3 className="terms-rights__h3">

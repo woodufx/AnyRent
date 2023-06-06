@@ -1,3 +1,4 @@
 module.exports = {
-    url: "mongodb+srv://C_reato_R:C_reato_R@cluster0.42u4m.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+    url: "mongodb+srv://woodufx:1v74wrW9t5P6zDq7@anyrebt.bw18qtf.mongodb.net/",
+
 };

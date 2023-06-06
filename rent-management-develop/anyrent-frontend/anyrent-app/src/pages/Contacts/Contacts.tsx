@@ -23,12 +23,6 @@ const Contacts = (props: ContactsProps) => {
                 <h2 className="contacts__h2"> Звоните по телефону: <a className="a" href="tel: +8(800)-500-34-31"> 8(800)-500-34-31 </a></h2>
                 <h2 className="contacts__h2"> Или пишите в наши мессенджеры: </h2>
                 <h2 className="contacts__h2"> Наши телеграмм контакты для связи:  </h2>
-                <a className="contacts__a" href="https://t.me/Michael_Chusov">
-                    @Michael_Chusov
-                </a>
-                <a className="contacts__a" href="https://t.me/C_reato_R750">
-                    @C_reato_R750
-                </a>
                 <a className="contacts__a" href="https://t.me/woodufx">
                     @woodufx
                 </a>

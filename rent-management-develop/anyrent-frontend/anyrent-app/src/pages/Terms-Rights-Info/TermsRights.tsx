@@ -21,7 +21,7 @@ const TermsRights = (props: TermsRightsProps) => {
                     <h3 className="terms-rights__h3"> г. ___________________</h3>
                 </div>
                 <div className="">
-                    <h3 className="terms-rights__h3"> "__"____________2022г.</h3>
+                    <h3 className="terms-rights__h3"> "__"____________2023г.</h3>
                 </div>
             </div>
             <h3 className="terms-rights__h3"> Гр._______________ , паспорт: серия ________ , № ______, выданный _________, 

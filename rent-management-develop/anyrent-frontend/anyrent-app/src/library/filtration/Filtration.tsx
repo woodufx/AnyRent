@@ -3,6 +3,8 @@ import ARRangeSlider from "../rangeSlider/RangeSlider";
 import { ARCheckbox } from "../checkbox";
 import ARToggle from "../toggle/Toggle";
 import chevronLeft from "../../assets/styles/img/chevron-left.png";
+import { RootState } from "../../core/store/store";
+import { useDispatch, useSelector } from "react-redux";
 import { ChangeEvent, FC, useCallback, useEffect, useState, useRef } from "react";
 import "./filtration.less";
 
@@ -18,6 +20,7 @@ export const ARFiltration = (props: ARFiltrationProps) => {
     const [hideBrand, setHideBrand] = useState(false);
     const [withSale, setWithSale] = useState(false);
     const [recommend, setWithReccomend] = useState(false);
+    const { itemsList } = useSelector((state: RootState) => state.items);
     let checkboxList: string[] = [];
     
     const setCheckboxValues = (value: string, cheched: boolean) => {

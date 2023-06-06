@@ -107,26 +107,6 @@ const LoginForm = () => {
                     </ReactTooltip>
                 </div>
 
-                <div className="or-line-container">
-                    <div className="hr-line"></div>
-                    <span className="or-text">Или</span>
-                    <div className="hr-line"></div>
-                </div>
-
-                <div className="left-block__social-media">
-                    <div className="social-media__items-container">
-                        <GoogleLogin
-                            onSuccess={handleGoogleLogin}
-                            onError={() => {
-                                console.log("Login Failed");
-                            }}
-                        ></GoogleLogin>
-                    </div>
-                    <ReactTooltip id="socialMediaTip" place="right" effect="solid" delayShow={200}>
-                        В разработке...
-                    </ReactTooltip>
-                </div>
-
                 <div className="left-block__bottom-text bottom-text">
                     <span className="bottom-text__text">Еще нет аккаунта?</span>
                     <a href="" className="bottom-text__link" onClick={() => navigate(ARRoutes.SIGNUP_PAGE, { replace: true })}>

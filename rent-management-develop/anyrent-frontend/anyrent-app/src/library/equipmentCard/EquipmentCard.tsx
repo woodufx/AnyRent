@@ -78,7 +78,7 @@ const EquipmentCard = (props: IEquipmentCardProps) => {
 
                         <div className="ar-card__info-wrapper">
                             <h2>{props.title}</h2>
-                            <p>{props.description}</p>
+                            <p>{props.description.substring(0, 350) + "..."}</p>
                             {props.address && <p className="ar-card__address">{props.address}</p>}
                             {props.type === "primary" && (
                             <ARRating value={props.rating!} />)}
